@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clínica Integral del Pie en Chalco, Cuautzingo. Especialistas en podología, uñas encarnadas, pie diabético, juanetes y cuidado especializado de pies. Agenda tu cita hoy." />
+  <meta name="keywords" content="podología Chalco, clínica del pie Cuautzingo, uñas encarnadas, pie diabético, juanetes, podólogo Chalco, cuidado de pies Estado de México" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Clínica Integral del Pie — Chalco, Cuautzingo" />
+  <meta property="og:description" content="Cuidamos tu salud, cuidamos de ti. Especialistas en podología y cuidado integral del pie en Chalco, Cuautzingo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80" />
+  <title>Clínica Integral del Pie — Chalco, Cuautzingo | Podología Especializada</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue':       '#1a3d7c',
+            'brand-blue-light': '#2451a0',
+            'brand-blue-dark':  '#112855',
+            'brand-green':      '#3aaa3a',
+            'brand-green-light':'#4cc44c',
+            'brand-green-dark': '#2a8a2a',
+          },
+          fontFamily: {
+            'sans':    ['Inter', 'system-ui', 'sans-serif'],
+            'display': ['Poppins', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-sans bg-white overflow-x-hidden">
+
+  <!-- ============================================================ -->
+  <!-- LOADER PREMIUM                                               -->
+  <!-- ============================================================ -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo-ring">
+        <svg class="loader-ring-svg" viewBox="0 0 120 120">
+          <circle class="loader-ring-track" cx="60" cy="60" r="52" />
+          <circle class="loader-ring-progress" cx="60" cy="60" r="52" />
+        </svg>
+        <img src="imagenes/logo.png" alt="Logo" class="loader-logo-img" />
+      </div>
+      <div class="loader-brand">
+        <span class="loader-brand-top">CLÍNICA INTEGRAL</span>
+        <span class="loader-brand-bottom">DEL PIE</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill" id="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HEADER / NAVBAR                                              -->
+  <!-- ============================================================ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2 group">
+        <img src="imagenes/logo.png" alt="Logo Clínica Integral del Pie" class="w-12 h-12 object-contain drop-shadow-md" />
+        <div>
+          <span class="font-display font-bold text-sm leading-none nav-logo-primary block">CLÍNICA INTEGRAL</span>
+          <span class="font-display font-black text-lg leading-none nav-logo-secondary block">DEL PIE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-6">
+        <li><a href="#nosotros"   class="nav-link font-medium text-sm transition-colors hover:text-brand-green">Nosotros</a></li>
+        <li><a href="#servicios"  class="nav-link font-medium text-sm transition-colors hover:text-brand-green">Servicios</a></li>
+        <li><a href="#beneficios" class="nav-link font-medium text-sm transition-colors hover:text-brand-green">Beneficios</a></li>
+        <li><a href="#proceso"    class="nav-link font-medium text-sm transition-colors hover:text-brand-green">Proceso</a></li>
+        <li><a href="#contacto"   class="nav-link font-medium text-sm transition-colors hover:text-brand-green">Contacto</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="https://wa.me/5215516184950?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank"
+         class="hidden md:flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+        <i data-lucide="calendar-check" class="w-4 h-4"></i>
+        Agendar Cita
+      </a>
+
+      <!-- Mobile Burger -->
+      <button id="burger" class="md:hidden nav-burger p-2 rounded-lg" aria-label="Menú">
+        <div class="burger-line w-5 h-0.5 mb-1 transition-all"></div>
+        <div class="burger-line w-5 h-0.5 mb-1 transition-all"></div>
+        <div class="burger-line w-5 h-0.5 transition-all"></div>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden hidden px-4 pb-4">
+      <ul class="flex flex-col gap-3">
+        <li><a href="#nosotros"   class="mobile-nav-link block py-2 font-medium">Nosotros</a></li>
+        <li><a href="#servicios"  class="mobile-nav-link block py-2 font-medium">Servicios</a></li>
+        <li><a href="#beneficios" class="mobile-nav-link block py-2 font-medium">Beneficios</a></li>
+        <li><a href="#proceso"    class="mobile-nav-link block py-2 font-medium">Proceso</a></li>
+        <li><a href="#contacto"   class="mobile-nav-link block py-2 font-medium">Contacto</a></li>
+        <li>
+          <a href="https://wa.me/5215516184950?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank"
+             class="flex items-center justify-center gap-2 bg-brand-green text-white font-semibold py-3 rounded-full text-sm mt-2">
+            <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            Agendar Cita
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- HERO SECTION — Big Tech Level                               -->
+    <!-- ============================================================ -->
+    <section id="inicio" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+
+      <!-- Canvas de partículas (JS nativo) -->
+      <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[1]"></canvas>
+
+      <!-- Imagen de fondo con parallax JS -->
+      <div class="hero-bg absolute inset-0 z-0" id="hero-bg-wrap">
+        <img
+          id="hero-bg-img"
+          src="imagenes/pie-diabetico-podologia.jpg"
+          alt="Especialista en podología examinando pie"
+          class="w-full h-full object-cover object-center"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Overlay degradado multicapa animado -->
+      <div class="hero-overlay-1 absolute inset-0 z-[2]"></div>
+      <div class="hero-overlay-2 absolute inset-0 z-[2]"></div>
+      <div class="hero-overlay-animated absolute inset-0 z-[2]"></div>
+
+      <!-- Orbs de luz flotantes (animados con CSS) -->
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+
+      <!-- Líneas decorativas de fondo -->
+      <div class="hero-grid-lines absolute inset-0 z-[2] pointer-events-none" aria-hidden="true"></div>
+
+      <!-- Hero Content — z-index sobre todo -->
+      <div class="hero-content relative z-10 text-center px-4 max-w-5xl mx-auto w-full" id="hero-content">
+
+        <!-- Badge animado -->
+        <div class="hero-el hero-el--badge inline-flex items-center gap-2 bg-white/12 backdrop-blur-xl border border-white/25 text-white text-xs font-semibold px-5 py-2.5 rounded-full mb-7 shadow-2xl">
+          <span class="badge-dot"></span>
+          Especialistas en Cuidado del Pie · Chalco, Cuautzingo
+        </div>
+
+        <!-- Título — cada palabra envuelta para reveal individual -->
+        <h1 class="font-display font-black text-white leading-[1.05] mb-5">
+          <span class="hero-el hero-el--title-1 block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Tus Pies Merecen
+          </span>
+          <span class="hero-el hero-el--title-2 block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gradient-green">
+            Atención Experta
+          </span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="hero-el hero-el--sub text-white/85 text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto mb-9 leading-relaxed">
+          Cuidamos tu salud, cuidamos de ti. Tratamientos especializados en podología con tecnología moderna y atención personalizada.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-el hero-el--ctas flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a href="https://wa.me/5215516184950?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank"
+             class="cta-primary group relative overflow-hidden flex items-center gap-2.5 bg-brand-green text-white font-bold text-base px-9 py-4 rounded-full shadow-2xl">
+            <i data-lucide="calendar-check" class="w-5 h-5 relative z-10"></i>
+            <span class="relative z-10">Agenda tu Cita</span>
+            <span class="cta-shimmer" aria-hidden="true"></span>
+          </a>
+          <a href="#servicios"
+             class="cta-secondary flex items-center gap-2.5 bg-white/12 backdrop-blur-xl hover:bg-white/22 border border-white/35 text-white font-semibold text-base px-9 py-4 rounded-full transition-all duration-500">
+            <i data-lucide="stethoscope" class="w-5 h-5"></i>
+            Ver Servicios
+          </a>
+        </div>
+
+        <!-- Stats cards — glass premium -->
+        <div class="hero-el hero-el--cards grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div class="stat-card glass-card p-5 rounded-2xl text-center" data-float-delay="0">
+            <div class="stat-num font-display font-black text-3xl text-brand-green-light" data-target="500" data-prefix="+">+500</div>
+            <div class="text-white/75 text-sm mt-1 font-medium">Pacientes atendidos</div>
+          </div>
+          <div class="stat-card glass-card p-5 rounded-2xl text-center" data-float-delay="200">
+            <div class="stat-num font-display font-black text-3xl text-brand-green-light">5★</div>
+            <div class="text-white/75 text-sm mt-1 font-medium">Calificación promedio</div>
+          </div>
+          <div class="stat-card glass-card p-5 rounded-2xl text-center" data-float-delay="400">
+            <div class="stat-num font-display font-black text-3xl text-brand-green-light" data-target="10" data-suffix="+">10+</div>
+            <div class="text-white/75 text-sm mt-1 font-medium">Años de experiencia</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 z-10" id="scroll-hint">
+        <span class="text-xs tracking-[0.2em] uppercase font-medium">Explorar</span>
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SOBRE NOSOTROS — Split section con imagen real             -->
+    <!-- ============================================================ -->
+    <section id="nosotros" class="py-20 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Imagen izquierda — composición premium -->
+          <div class="about-image-wrapper relative animate-on-scroll">
+            <!-- Imagen principal -->
+            <div class="about-img-main rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="imagenes/images.jpg"
+                alt="Podólogo examinando pie de paciente"
+                class="w-full h-80 lg:h-[500px] object-cover object-center"
+                loading="lazy"
+              />
+            </div>
+            <!-- Badge flotante — años de experiencia -->
+            <div class="about-badge-float absolute -bottom-5 -right-5 bg-white rounded-2xl px-5 py-4 shadow-xl border border-gray-100 flex items-center gap-3">
+              <div class="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center">
+                <i data-lucide="award" class="w-6 h-6 text-brand-green"></i>
+              </div>
+              <div>
+                <div class="font-display font-black text-2xl text-brand-blue-dark leading-none">10+</div>
+                <div class="text-xs text-gray-500 font-medium">Años de experiencia</div>
+              </div>
+            </div>
+            <!-- Decorative accent -->
+            <div class="about-accent absolute -top-4 -left-4 w-24 h-24 bg-brand-green/10 rounded-2xl -z-10"></div>
+            <div class="about-accent-2 absolute -bottom-8 -left-8 w-40 h-40 bg-brand-blue/5 rounded-full -z-10"></div>
+          </div>
+
+          <!-- Texto derecha -->
+          <div class="animate-on-scroll">
+            <span class="section-badge inline-block bg-brand-blue/10 text-brand-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-5">Quiénes Somos</span>
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-5 leading-tight">
+              Especialistas que<br>se preocupan por<br>
+              <span class="text-brand-green">tu bienestar</span>
+            </h2>
+            <p class="text-gray-500 leading-relaxed mb-5">
+              En <strong class="text-brand-blue-dark">Clínica Integral del Pie</strong> contamos con un equipo de podólogos certificados comprometidos con la salud y el bienestar de cada paciente. Nuestra misión es brindar atención especializada, humana y de alta calidad en cada consulta.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Desde el diagnóstico hasta la recuperación completa, te acompañamos con calidez, tecnología moderna y protocolos clínicos de excelencia. Ubicados en Chalco, Cuautzingo, atendemos a toda la región con horarios flexibles y precios accesibles.
+            </p>
+            <!-- Mini stats row -->
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="text-center p-3 bg-gray-50 rounded-2xl">
+                <div class="font-display font-black text-2xl text-brand-green">+500</div>
+                <div class="text-xs text-gray-500 mt-0.5">Pacientes</div>
+              </div>
+              <div class="text-center p-3 bg-gray-50 rounded-2xl">
+                <div class="font-display font-black text-2xl text-brand-blue">6</div>
+                <div class="text-xs text-gray-500 mt-0.5">Servicios</div>
+              </div>
+              <div class="text-center p-3 bg-gray-50 rounded-2xl">
+                <div class="font-display font-black text-2xl text-brand-green">5★</div>
+                <div class="text-xs text-gray-500 mt-0.5">Calificación</div>
+              </div>
+            </div>
+            <a href="https://wa.me/5215516184950?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank"
+               class="inline-flex items-center gap-2.5 bg-brand-blue hover:bg-brand-blue-dark text-white font-bold px-7 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+              <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              Agenda tu Consulta
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SERVICIOS                                                    -->
+    <!-- ============================================================ -->
+    <section id="servicios" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+
+        <div class="section-header text-center mb-14">
+          <span class="section-badge inline-block bg-brand-green/10 text-brand-green font-semibold text-sm px-4 py-1.5 rounded-full mb-4">Nuestros Tratamientos</span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-4">Servicios Especializados<br>para el Cuidado de tus Pies</h2>
+          <p class="text-gray-500 max-w-xl mx-auto text-base">Ofrecemos soluciones integrales para cada condición del pie, con tecnología moderna y profesionales certificados.</p>
+        </div>
+
+        <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <!-- Imagen real con overlay -->
+            <div class="service-card-img relative overflow-hidden h-44">
+              <img src="imagenes/images (1).jpg" alt="Podología general" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-brand-blue/20 to-transparent"></div>
+              <span class="absolute top-3 right-3 bg-white/90 text-brand-blue text-xs font-bold px-3 py-1 rounded-full shadow">Popular</span>
+              <div class="absolute bottom-3 left-3 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                <i data-lucide="activity" class="w-5 h-5 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Podología General</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Consulta y tratamiento completo del pie: revisión, diagnóstico y plan de atención personalizado para mantener tus pies sanos.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Incluye diagnóstico inicial
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <!-- Imagen real con overlay -->
+            <div class="service-card-img relative overflow-hidden h-44">
+              <img src="imagenes/images (4).jpg" alt="Tratamiento de uñas encarnadas" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark/80 via-brand-green/20 to-transparent"></div>
+              <span class="absolute top-3 right-3 bg-white/90 text-brand-green-dark text-xs font-bold px-3 py-1 rounded-full shadow">Urgencias</span>
+              <div class="absolute bottom-3 left-3 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                <i data-lucide="scissors" class="w-5 h-5 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Uñas Encarnadas</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Tratamiento eficaz y sin dolor para uñas encarnadas. Eliminamos la incomodidad y prevenimos infecciones con técnica especializada.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Alivio desde la primera sesión
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <!-- Imagen real con overlay -->
+            <div class="service-card-img relative overflow-hidden h-44">
+              <img src="imagenes/images (3).jpg" alt="Tratamiento pie diabético" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-blue-dark/80 via-brand-blue/20 to-transparent"></div>
+              <span class="absolute top-3 right-3 bg-white/90 text-brand-blue text-xs font-bold px-3 py-1 rounded-full shadow">Especialidad</span>
+              <div class="absolute bottom-3 left-3 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Pie Diabético</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Cuidado preventivo y terapéutico especializado para pacientes con diabetes. Revisiones periódicas para evitar complicaciones graves.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Protocolo certificado
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <div class="service-card-header bg-gradient-to-br from-indigo-600 to-brand-blue p-6 flex items-center justify-between">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                <i data-lucide="zap" class="w-7 h-7 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Verrugas Plantares</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Eliminación efectiva de verrugas plantares con tratamientos modernos, seguros y con mínimas molestias para el paciente.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Resultados comprobados
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <div class="service-card-header bg-gradient-to-br from-teal-600 to-brand-green-dark p-6 flex items-center justify-between">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                <i data-lucide="move" class="w-7 h-7 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Juanetes y Deformidades</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Tratamiento y manejo conservador de juanetes, dedos en martillo y otras deformidades del pie para mejorar tu movilidad.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Evaluación biomecánica incluida
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+            <div class="service-card-header bg-gradient-to-br from-brand-green to-teal-500 p-6 flex items-center justify-between">
+              <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                <i data-lucide="layers" class="w-7 h-7 text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-brand-blue-dark mb-2">Plantillas Ortopédicas</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">Diseño y adaptación de plantillas personalizadas para corregir la pisada, aliviar el dolor y mejorar la postura corporal.</p>
+              <div class="flex items-center gap-2 text-brand-green font-semibold text-sm">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                Medición personalizada
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BENEFICIOS                                                   -->
+    <!-- ============================================================ -->
+    <section id="beneficios" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+
+        <div class="section-header text-center mb-14">
+          <span class="section-badge inline-block bg-brand-blue/10 text-brand-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4">¿Por qué elegirnos?</span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-4">Tu Salud en las Mejores<br>Manos Especializadas</h2>
+          <p class="text-gray-500 max-w-xl mx-auto">Nos comprometemos con tu bienestar desde el primer momento con atención de calidad, calidez humana y resultados reales.</p>
+        </div>
+
+        <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-green/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-7 h-7 text-brand-green"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Calidad Garantizada</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Trabajamos con los más altos estándares de higiene, esterilización y protocolos clínicos certificados.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-blue/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="user-check" class="w-7 h-7 text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Atención Personalizada</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Cada paciente recibe un plan de tratamiento único, adaptado a su condición y estilo de vida.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-green/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="clock" class="w-7 h-7 text-brand-green"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Horarios Flexibles</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Citas disponibles en horarios que se adaptan a tu agenda sin largas esperas ni tiempos muertos.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-blue/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="map-pin" class="w-7 h-7 text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Ubicación Estratégica</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Fácil acceso en Chalco, Cuautzingo. Atendemos a toda la zona oriente del Estado de México.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-green/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="award" class="w-7 h-7 text-brand-green"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Profesionales Certificados</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Nuestro equipo cuenta con formación especializada y actualización constante en podología clínica.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item flex gap-4">
+            <div class="benefit-icon w-14 h-14 min-w-[3.5rem] bg-brand-blue/10 rounded-2xl flex items-center justify-center">
+              <i data-lucide="heart-handshake" class="w-7 h-7 text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-brand-blue-dark mb-1">Seguimiento Continuo</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Te acompañamos durante todo tu proceso de recuperación con orientación y soporte personalizado.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- HORARIOS Y LOGÍSTICA                                         -->
+    <!-- ============================================================ -->
+    <section id="atencion" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+
+        <div class="section-header text-center mb-14">
+          <span class="section-badge inline-block bg-brand-green/10 text-brand-green font-semibold text-sm px-4 py-1.5 rounded-full mb-4">Información de Atención</span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-4">Estamos Aquí para Ti</h2>
+          <p class="text-gray-500 max-w-xl mx-auto">Conoce nuestros horarios, modalidades de atención y cómo funciona nuestro proceso de citas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div class="info-card bg-white rounded-2xl p-7 shadow-md">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="clock-3" class="w-6 h-6 text-brand-blue"></i>
+            </div>
+            <h3 class="font-display font-bold text-brand-blue-dark text-lg mb-3">Horarios de Atención</h3>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li class="flex justify-between"><span>Lunes – Viernes</span><span class="font-medium text-brand-blue-dark">9:00 – 19:00</span></li>
+              <li class="flex justify-between"><span>Sábado</span><span class="font-medium text-brand-blue-dark">9:00 – 14:00</span></li>
+              <li class="flex justify-between"><span>Domingo</span><span class="font-medium text-gray-400">Cita previa</span></li>
+            </ul>
+          </div>
+
+          <div class="info-card bg-white rounded-2xl p-7 shadow-md">
+            <div class="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="stethoscope" class="w-6 h-6 text-brand-green"></i>
+            </div>
+            <h3 class="font-display font-bold text-brand-blue-dark text-lg mb-3">Modalidades de Atención</h3>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Consulta presencial</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Atención a domicilio</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Seguimiento por WhatsApp</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Citas para adultos mayores</li>
+            </ul>
+          </div>
+
+          <div class="info-card bg-white rounded-2xl p-7 shadow-md">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="credit-card" class="w-6 h-6 text-brand-blue"></i>
+            </div>
+            <h3 class="font-display font-bold text-brand-blue-dark text-lg mb-3">Formas de Pago</h3>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Efectivo</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Transferencia bancaria</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Tarjeta débito / crédito</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Precios accesibles</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PROCESO DE CITA                                              -->
+    <!-- ============================================================ -->
+    <section id="proceso" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+
+        <div class="section-header text-center mb-14">
+          <span class="section-badge inline-block bg-brand-blue/10 text-brand-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4">Así de Fácil</span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-4">Tu Cita en 4 Simples Pasos</h2>
+          <p class="text-gray-500 max-w-xl mx-auto">Agenda tu consulta de forma rápida y sin complicaciones.</p>
+        </div>
+
+        <div class="process-steps grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="process-step text-center">
+            <div class="step-number w-16 h-16 bg-brand-green text-white font-black text-2xl font-display rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-green/30">1</div>
+            <h3 class="font-display font-bold text-brand-blue-dark mb-2">Contacta</h3>
+            <p class="text-gray-500 text-sm">Escríbenos por WhatsApp o llámanos al 551 618 4950</p>
+          </div>
+
+          <div class="process-step text-center">
+            <div class="step-number w-16 h-16 bg-brand-blue text-white font-black text-2xl font-display rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-blue/30">2</div>
+            <h3 class="font-display font-bold text-brand-blue-dark mb-2">Agenda</h3>
+            <p class="text-gray-500 text-sm">Seleccionamos el día y hora que mejor se adapte a ti</p>
+          </div>
+
+          <div class="process-step text-center">
+            <div class="step-number w-16 h-16 bg-brand-green text-white font-black text-2xl font-display rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-green/30">3</div>
+            <h3 class="font-display font-bold text-brand-blue-dark mb-2">Consulta</h3>
+            <p class="text-gray-500 text-sm">Diagnóstico completo y tratamiento especializado</p>
+          </div>
+
+          <div class="process-step text-center">
+            <div class="step-number w-16 h-16 bg-brand-blue text-white font-black text-2xl font-display rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-blue/30">4</div>
+            <h3 class="font-display font-bold text-brand-blue-dark mb-2">Seguimiento</h3>
+            <p class="text-gray-500 text-sm">Te acompañamos hasta tu recuperación completa</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CTA BANNER VISUAL DESTACADO — Split elegante con imagen     -->
+    <!-- ============================================================ -->
+    <section class="cta-banner relative overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+
+        <!-- Imagen izquierda — images (2).jpg: guante blanco, muy limpia -->
+        <div class="cta-img-side relative overflow-hidden order-2 lg:order-1">
+          <img
+            src="imagenes/images (2).jpg"
+            alt="Especialista en podología"
+            class="w-full h-64 lg:h-full object-cover object-center"
+            loading="lazy"
+          />
+          <!-- Overlay y detalles decorativos -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-brand-blue-dark/20 lg:to-brand-blue-dark/60"></div>
+          <!-- Badge de confianza sobre la imagen -->
+          <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-green/15 rounded-xl flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-5 h-5 text-brand-green"></i>
+            </div>
+            <div>
+              <div class="text-xs text-gray-500 font-medium">Atención certificada</div>
+              <div class="font-bold text-brand-blue-dark text-sm">Podología especializada</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto derecha con fondo degradado de marca -->
+        <div class="cta-banner-bg relative flex items-center order-1 lg:order-2">
+          <div class="cta-banner-content relative z-10 px-8 md:px-12 py-14 lg:py-20">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 border border-white/30">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-white"></i>
+              +500 pacientes nos recomiendan
+            </div>
+            <h2 class="font-display font-black text-3xl md:text-4xl xl:text-5xl text-white mb-4 leading-tight">
+              ¿Tienes dolor o molestia<br>en los pies?
+              <span class="block text-brand-green-light">No lo dejes pasar más.</span>
+            </h2>
+            <p class="text-white/80 text-base md:text-lg mb-8 leading-relaxed max-w-md">
+              El 80% de los problemas del pie tienen solución cuando se atienden a tiempo. Nuestros especialistas están listos para ayudarte hoy.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://wa.me/5215516184950?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank"
+                 class="flex items-center justify-center gap-2.5 bg-white text-brand-blue font-bold px-7 py-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-sm">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Escribir por WhatsApp
+              </a>
+              <a href="tel:5516184950"
+                 class="flex items-center justify-center gap-2.5 border-2 border-white/50 text-white font-semibold px-7 py-4 rounded-full hover:bg-white/10 transition-all duration-300 text-sm">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                551 618 4950
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTACTO Y UBICACIÓN                                         -->
+    <!-- ============================================================ -->
+    <section id="contacto" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+
+        <div class="section-header text-center mb-14">
+          <span class="section-badge inline-block bg-brand-green/10 text-brand-green font-semibold text-sm px-4 py-1.5 rounded-full mb-4">Contáctanos</span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-brand-blue-dark mb-4">Estamos en Chalco, Cuautzingo</h2>
+          <p class="text-gray-500 max-w-xl mx-auto">Visítanos en nuestra clínica o escríbenos y con gusto te atendemos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+          <!-- Formulario -->
+          <div class="bg-white rounded-3xl p-8 shadow-lg">
+            <h3 class="font-display font-bold text-xl text-brand-blue-dark mb-6">Envíanos un Mensaje</h3>
+            <form class="space-y-4" onsubmit="handleForm(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Nombre completo</label>
+                  <input type="text" placeholder="Tu nombre" required
+                    class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Teléfono</label>
+                  <input type="tel" placeholder="55 1234 5678" required
+                    class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Correo electrónico</label>
+                <input type="email" placeholder="tu@email.com"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">¿En qué podemos ayudarte?</label>
+                <select class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all">
+                  <option value="">Selecciona un servicio</option>
+                  <option>Podología general</option>
+                  <option>Uñas encarnadas</option>
+                  <option>Pie diabético</option>
+                  <option>Verrugas plantares</option>
+                  <option>Juanetes y deformidades</option>
+                  <option>Plantillas ortopédicas</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensaje (opcional)</label>
+                <textarea rows="3" placeholder="Cuéntanos más sobre tu situación..."
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all resize-none"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+
+          <!-- Info + Mapa -->
+          <div class="flex flex-col gap-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="https://wa.me/5215516184950" target="_blank"
+                 class="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all group flex items-center gap-4">
+                <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center group-hover:bg-brand-green transition-colors">
+                  <i data-lucide="message-circle" class="w-6 h-6 text-brand-green group-hover:text-white transition-colors"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 font-medium mb-0.5">WhatsApp</div>
+                  <div class="font-bold text-brand-blue-dark text-sm">551 618 4950</div>
+                </div>
+              </a>
+
+              <a href="tel:5516184950"
+                 class="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all group flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-brand-blue transition-colors">
+                  <i data-lucide="phone" class="w-6 h-6 text-brand-blue group-hover:text-white transition-colors"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 font-medium mb-0.5">Teléfono</div>
+                  <div class="font-bold text-brand-blue-dark text-sm">551 618 4950</div>
+                </div>
+              </a>
+
+              <div class="bg-white rounded-2xl p-5 shadow-md flex items-center gap-4 sm:col-span-2">
+                <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                  <i data-lucide="map-pin" class="w-6 h-6 text-red-500"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 font-medium mb-0.5">Ubicación</div>
+                  <div class="font-bold text-brand-blue-dark text-sm">Chalco, Cuautzingo, Estado de México</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="rounded-2xl overflow-hidden shadow-lg flex-1" style="min-height: 260px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30192.06785440892!2d-98.90395!3d19.26500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0c6bca6b3b91%3A0xefcb7d2ca0f78ed!2sCuautzingo%2C%20Chalco%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+                width="100%" height="100%"
+                style="min-height: 260px; border: 0;"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación Clínica Integral del Pie">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="bg-brand-blue-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="imagenes/logo.png" alt="Logo Clínica Integral del Pie" class="w-12 h-12 object-contain brightness-0 invert" />
+            <div>
+              <div class="font-display font-bold text-sm text-white/70">CLÍNICA INTEGRAL</div>
+              <div class="font-display font-black text-lg text-brand-green-light leading-none">DEL PIE</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-xs">Cuidamos tu salud, cuidamos de ti. Especialistas en podología en Chalco, Cuautzingo.</p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-xs uppercase tracking-widest text-white/40 mb-4">Navegación</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio"     class="text-white/70 hover:text-brand-green-light text-sm transition-colors">Inicio</a></li>
+            <li><a href="#servicios"  class="text-white/70 hover:text-brand-green-light text-sm transition-colors">Servicios</a></li>
+            <li><a href="#beneficios" class="text-white/70 hover:text-brand-green-light text-sm transition-colors">Beneficios</a></li>
+            <li><a href="#proceso"    class="text-white/70 hover:text-brand-green-light text-sm transition-colors">Proceso</a></li>
+            <li><a href="#contacto"   class="text-white/70 hover:text-brand-green-light text-sm transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-xs uppercase tracking-widest text-white/40 mb-4">Contacto</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2 text-white/70 text-sm">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-green-light"></i>
+              551 618 4950
+            </li>
+            <li class="flex items-center gap-2 text-white/70 text-sm">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-green-light"></i>
+              Chalco, Cuautzingo, Edo. Méx.
+            </li>
+            <li class="flex items-center gap-2 text-white/70 text-sm">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-green-light"></i>
+              Lun–Vie: 9:00–19:00 · Sáb: 9:00–14:00
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-white/40 text-xs">© 2024 Clínica Integral del Pie. Todos los derechos reservados.</p>
+        <p class="text-white/30 text-xs">Cuidamos tu salud, cuidamos de ti.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- WHATSAPP FLOATING BUTTON                                     -->
+  <!-- ============================================================ -->
+  <a href="https://wa.me/5215516184950?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20sus%20servicios"
+     target="_blank"
+     id="whatsapp-float"
+     class="fixed bottom-6 left-6 z-50 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl"
+     aria-label="Contactar por WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+      <path d="M16 0C7.16 0 0 7.16 0 16C0 19.08 0.84 21.96 2.34 24.44L0 32L7.76 29.7C10.16 31.06 12.98 31.86 16 31.86C24.84 31.86 32 24.7 32 15.86C32 7.02 24.84 0 16 0ZM16 29.06C13.2 29.06 10.6 28.3 8.38 26.98L7.8 26.64L3.38 27.88L4.64 23.56L4.26 22.94C2.78 20.64 2 17.94 2 15.1C2 8.38 7.38 3 16 3C24.62 3 30 8.38 30 16C30 22.62 24.62 29.06 16 29.06ZM23.34 19.38C22.96 19.2 21.14 18.3 20.8 18.18C20.46 18.06 20.22 18 20 18.4C19.78 18.8 19.06 19.62 18.86 19.86C18.66 20.1 18.44 20.12 18.06 19.94C17.68 19.76 16.44 19.34 14.96 18.02C13.8 16.98 13.02 15.7 12.82 15.32C12.62 14.94 12.8 14.74 12.98 14.56C13.14 14.4 13.36 14.14 13.54 13.94C13.72 13.74 13.78 13.6 13.9 13.36C14.02 13.12 13.96 12.92 13.88 12.74C13.8 12.56 13.02 10.74 12.72 10.06C12.42 9.4 12.1 9.48 11.88 9.46C11.66 9.44 11.42 9.44 11.18 9.44C10.94 9.44 10.54 9.52 10.2 9.9C9.86 10.28 8.88 11.18 8.88 13C8.88 14.82 10.24 16.58 10.42 16.82C10.6 17.06 13.02 20.82 16.76 22.38C17.66 22.76 18.36 22.98 18.9 23.14C19.8 23.4 20.62 23.36 21.26 23.28C21.98 23.18 23.46 22.38 23.76 21.5C24.06 20.62 24.06 19.86 23.98 19.7C23.9 19.54 23.66 19.46 23.34 19.38Z"/>
+    </svg>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-24 left-6 z-50 bg-brand-blue-dark text-white px-5 py-3 rounded-xl shadow-xl text-sm font-medium hidden transition-all flex items-center gap-2">
+    <svg width="16" height="16" viewBox="0 0 32 32" fill="#25D366"><path d="M16 0C7.16 0 0 7.16 0 16C0 19.08 0.84 21.96 2.34 24.44L0 32L7.76 29.7C10.16 31.06 12.98 31.86 16 31.86C24.84 31.86 32 24.7 32 15.86C32 7.02 24.84 0 16 0Z"/></svg>
+    Redirigiendo a WhatsApp…
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
