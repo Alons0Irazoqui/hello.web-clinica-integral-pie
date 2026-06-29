@@ -426,7 +426,7 @@ window.handleForm = function(e) {
   btn.disabled = true;
 
   setTimeout(() => {
-    window.open(`https://wa.me/5215516184950?text=${encodeURIComponent(waMsg)}`, '_blank');
+    window.open(`https://wa.me/5215535226093?text=${encodeURIComponent(waMsg)}`, '_blank');
     btn.innerHTML = originalHTML;
     btn.disabled  = false;
     form.reset();
